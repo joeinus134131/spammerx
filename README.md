@@ -13,3 +13,23 @@ Tentang pengembang
 5. tools ini dibuat juga untuk memberikan pelajaran kepada orang yang jahat atau tidak suka dengan
 
 Dokuemntasi you can see in github repositories
+
+pastikan menggunakan python yang telah terinstall pustaka sebagai berikut :
+1. email
+2. urllib
+3. wsgiref
+4. request
+5. json
+6. os
+7. sys
+8. time
+
+untuk melakukan instalasi dapat menggunakan baris kode dibawah ini
+
+$~ git clone https://github.com/joeinus134131/spammerx
+
+$~ cd spammerx
+
+$~ ls
+
+$~ python spammerx.py

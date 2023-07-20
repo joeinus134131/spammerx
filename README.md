@@ -1,21 +1,22 @@
 # spammerx
 
-pengembangan tools spam sms berbasis python
+Python-Based SMS Spam Development Tool
 
-Tentang pengembang
-Author : IDNMakerSpace Algorithm Factory
-People : Made Agus Andi Gunawan
-Email : idnmakerspace@gmail.com
+About the Developer:
+Author: IDNMakerSpace Algorithm Factory
+Contact: Made Agus Andi Gunawan
+Email: idnmakerspace@gmail.com
 
-1. Install library yang diperlukan pada tools ini
-2. gunakan tools ini dengan bijak
-3. pengembang tidak bertanggung jawab atas kerugian yang diakibatkan
-4. program ini dikembangkan untuk menguji sistem API yang ada
-5. tools ini dibuat juga untuk memberikan pelajaran kepada orang yang jahat atau tidak suka dengan
+Instructions:
 
-Dokuemntasi you can see in github repositories
+Install the necessary libraries for this tool.
+Use this tool responsibly and wisely.
+The developer is not responsible for any resulting losses.
+This program was developed to test existing API systems.
+Additionally, this tool serves as an educational resource for those who are interested in learning about SMS spam and related topics.
+For detailed documentation, please visit the GitHub repository.
 
-pastikan menggunakan python yang telah terinstall pustaka sebagai berikut :
+Ensure that you have Python installed with the following libraries:
 
 1. email
 2. urllib
@@ -27,7 +28,7 @@ pastikan menggunakan python yang telah terinstall pustaka sebagai berikut :
 8. time
 
 
-untuk melakukan instalasi dapat menggunakan baris kode dibawah ini
+To perform the installation, you can use the following code snippet below.
 
 ```
 git clone https://github.com/joeinus134131/spammerx
@@ -38,3 +39,5 @@ ls -la
 
 python spammerx.py
 ```
+
+Utilize this tool for useful purposes, especially for conducting testing on your system.

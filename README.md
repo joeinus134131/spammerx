@@ -30,11 +30,11 @@ pastikan menggunakan python yang telah terinstall pustaka sebagai berikut :
 untuk melakukan instalasi dapat menggunakan baris kode dibawah ini
 
 ```
-git clone https://github.com/joeinus134131/spammerxcd 
+git clone https://github.com/joeinus134131/spammerx
 
 cd spammerx
 
-ls
+ls -la
 
 python spammerx.py
 ```

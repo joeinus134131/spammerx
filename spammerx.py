@@ -11,12 +11,12 @@ import time
 #user interface
 os.system('clear')
 logo = """
-SPAM SMS TOOLS
-Author : MAde Agus Andi Gunawan
+SPAM SMS TOOLS FOR LOAD TEST
+Author : Emisi Lab
 Team : IDNMAkerspace Algorithma Factory
 Github : https://github.com/joeinus134131/
 
-format input nomor telpon
+Format phone number must be : 
 >> 81234567689
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"""
 
@@ -24,8 +24,8 @@ os.system('clear')
 print(logo)
 
 #input data
-target = input(" Nomor Target : ")
-iterasi = input(" Perulangan : ")
+target = input(" Target Number: ")
+iterasi = input(" Iteration : ")
 iterasi = int(iterasi)
 delay = input(" Delay : ")
 delay = int(delay)
@@ -50,13 +50,13 @@ headers = {
 #Iterasi percobaan pengiriman paket pesan
 for i in range(iterasi):
     respon = rek.post(api_url.headers).text
-    print(" Pesan ke -", i)
-    print(" Terkirim . . . . . . . ")
+    print(" Message iteration -", i)
+    print(" Sended message ...... ")
     time.sleep(delay)
 
 #json status
 status = json.loads(respon)["StatusMessage"]
-if status == "Request misscall berhasil":
-    print("\n {*} Spam call / Telepon untuk No"+ target+" Berhasil \n")
+if status == "Request misscall success":
+    print("\n {*} Spam call / Phone Number"+ target+" Success \n")
 else:
-    print("\n {*} Spam sudah dilakukan 3x >> Gaga; \n")
+    print("\n {*} Spam has been "+iterasi+"x >> failed; \n")

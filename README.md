@@ -1,10 +1,11 @@
 # spammerx
+
 pengembangan tools spam sms berbasis python
 
 Tentang pengembang
-====== Author : IDNMakerSpace Algorithm Factory ========
-====== people : Made Agus Andi Gunawan ============
-====== email : idnmakerspace@gmail.com ===========
+Author : IDNMakerSpace Algorithm Factory
+People : Made Agus Andi Gunawan
+Email : idnmakerspace@gmail.com
 
 1. Install library yang diperlukan pada tools ini
 2. gunakan tools ini dengan bijak
@@ -15,6 +16,7 @@ Tentang pengembang
 Dokuemntasi you can see in github repositories
 
 pastikan menggunakan python yang telah terinstall pustaka sebagai berikut :
+
 1. email
 2. urllib
 3. wsgiref
@@ -24,12 +26,15 @@ pastikan menggunakan python yang telah terinstall pustaka sebagai berikut :
 7. sys
 8. time
 
+
 untuk melakukan instalasi dapat menggunakan baris kode dibawah ini
 
-$~ git clone https://github.com/joeinus134131/spammerx
+```
+git clone https://github.com/joeinus134131/spammerxcd 
 
-$~ cd spammerx
+cd spammerx
 
-$~ ls
+ls
 
-$~ python spammerx.py
+python spammerx.py
+```

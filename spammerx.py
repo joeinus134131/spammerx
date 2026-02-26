@@ -1,12 +1,17 @@
 #library python
-from email import header
-from urllib import response
-from wsgiref import headers
-import requests
 import json
 import os
 import sys
 import time
+import subprocess
+
+# check and install requests
+try:
+    import requests
+except ImportError:
+    print("requests library not found. Installing...")
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "requests"])
+    import requests
 
 #user interface
 os.system('clear')
